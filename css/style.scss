@@ -1,0 +1,472 @@
+$color-principal:#222222;
+$blanco:#fff;
+$muted: #888888;
+$principal-soft: rgba(34, 34, 34, 0.2);
+
+@mixin transiciones($tiempo) {
+    -o-transition: $tiempo;
+    -moz-transition: $tiempo;
+    -webkit-transition: $tiempo;
+    transition: $tiempo;
+}
+
+.bg-black {
+    background: $color-principal;
+}
+
+a {
+    @include transiciones(0.3s);
+    color: $color-principal;
+
+    img {
+        @include transiciones(0.3s);
+    }
+
+    .tag {
+        display: inline-block;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        color: $muted;
+        text-decoration: none;
+
+        img {
+            opacity: 0.7;
+        }
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar,
+footer {
+    img {
+        width: auto;
+        max-height: 35px;
+    }
+}
+
+.navbar {
+    background-color: $blanco;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+.hero-img {
+    background-position: center;
+    background-size: cover;
+    max-height: 100vh;
+    min-height: 350px;
+}
+
+.articulo-hero-container {
+    transform: translateY(-50%);
+    margin-bottom: -60px;
+}
+
+.articulo-block {
+    background-color: $blanco;
+    display: block;
+    padding: 1.2em;
+
+    .tag {
+        background-color: $color-principal;
+        border-radius: 0 1em 1em 0;
+        color: $blanco;
+        display: inline-block;
+        font-size: 10px;
+        padding: 3px 5px;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+    }
+
+    .autor {
+        font-size: 10px;
+        margin-left: 1em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    p {
+        color: $muted;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+}
+
+.seccion-titulo {
+    border-bottom: 1px solid $principal-soft;
+    margin-bottom: 1em;
+    padding-bottom: 0.8em;
+    width: 100%;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+.card-vertical {
+    margin-bottom: 3em;
+
+    .card-v-cuerpo {
+        display: block;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .tag {
+        font-size: 0.8em;
+    }
+
+
+    .card-v-img {
+        margin-bottom: 1em;
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+
+    .card-v-titulo {
+        font-size: 1.4em;
+    }
+
+    p {
+        color: $muted;
+        font-weight: 400;
+    }
+}
+
+.card-horizontal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    .tag {
+        font-size: 0.8em;
+    }
+
+    .card-h-titulo {
+        font-size: 1.1em;
+    }
+
+    .card-h-img {
+        width: 100%;
+    }
+}
+
+.block-interes {
+    background-color: $color-principal;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 2em;
+    width: 100%;
+
+    .block-interes-info {
+        color: $blanco;
+        padding: 2em;
+
+        .block-interes-titulo {
+            font-size: 1.8em;
+        }
+
+        .block-interes-parrafo {
+            color: $muted;
+            font-size: 1em;
+            margin-bottom: 3em;
+        }
+
+        .block-interes-boton {
+            border: 2px solid $blanco;
+            color: $blanco;
+            display: inline-block;
+            font-weight: 700;
+            padding: 1em;
+
+            &:hover {
+                background-color: $blanco;
+                color: $color-principal;
+            }
+        }
+    }
+
+    .block-interes-img {
+        //filter: grayscale(100%);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 56.25%;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.post {
+    .post-info {
+        .post-title {
+            font-size: 2.5em;
+            font-family: 'Frank Ruhl Libre', serif;
+            font-weight: 700;
+        }
+    
+        .post-tag {
+            background-color: $color-principal;
+            color: $blanco;
+            display: inline-block;
+            font-size: 1em;
+            margin-bottom: 1em;
+            padding: 0.2em 1em;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .post-img {
+        max-height: 50vh;
+        object-fit: cover;
+        width: 100%;
+    }
+
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Frank Ruhl Libre', serif;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2em;
+        font-family: 'Frank Ruhl Libre', serif;
+        margin-bottom: 1em;
+
+        span {
+            font-family: 'Frank Ruhl Libre', serif;
+        }
+
+        strong {
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+
+
+/*-----------TABLET------------*/
+@media only screen and (min-width: 768px) {
+    .hero-img {
+        height: 450px;
+        max-height: 80vh;
+        position: relative;
+    }
+
+    .articulo-hero-container {
+        position: absolute;
+        transform: translateY(-100%);
+        width: 100%;
+    }
+
+    .articulo-block {
+        padding: 1.5em;
+
+        .tag {
+            padding: 4px 8px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+    }
+
+    .recientes-wrapper {
+        margin-top: 3em;
+    }
+
+    .card-vertical {
+
+        .card-v-cuerpo {
+            padding: 0;
+        }
+
+        .card-v-img {
+            height: 250px;
+        }
+
+        .card-v-titulo {
+            font-size: 2em;
+        }
+
+        p {
+            color: $muted;
+            font-weight: 400;
+        }
+    }
+
+    .card-horizontal {
+        grid-template-columns: 1.5fr 1fr;
+        padding: 0;
+    }
+
+    .block-interes {
+        grid-template-columns: 1.3fr 1fr;
+    
+        .block-interes-info {
+            padding: 2.5em;
+    
+            .block-interes-titulo {
+                font-size: 2.2em;
+            }
+    
+            .block-interes-parrafo {
+                font-size: 1.2em;
+                margin-bottom: 2em;
+            }
+        }
+
+        .block-interes-img {
+            padding: 0;
+        }
+    }
+
+    .post {
+        display: grid;
+    
+        .post-info {
+            justify-self: center;
+            max-width: 70%;
+    
+            .post-title {
+                font-size: 3em;
+                justify-self: center;
+            }
+        
+            .post-tag {
+                font-size: 1.2em;
+            }
+        }
+    
+        img, twitterwidget, div {
+            justify-self: center !important;
+        }
+
+        a {
+            color: $color-principal;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    
+        .post-img {
+            max-height: 80vh;
+        }
+
+        h2,h3,h4,h5,h6 {
+            justify-self: center;
+            margin-bottom: 0.6em;
+            width: 70%;
+        }
+        
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+            letter-spacing: 0.2px;
+            word-spacing: 1.5px;
+            justify-self: center;
+            width: 70%;
+        }
+    }
+}
+
+/*-----------DESKTOP MD------------*/
+@media only screen and (min-width:961px) {
+
+    .hero-img {
+        height: 550px;
+        max-height: 80vh;
+    }
+
+    .articulo-block {
+        padding: 2em;
+
+        .tag {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+
+        .autor {
+            font-size: 12px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+    .card-vertical {
+        .card-v-img {
+            height: 350px;
+        }
+
+        .card-v-titulo {
+            font-size: 2.3em;
+        }
+    }
+
+    .card-horizontal {
+        grid-template-columns: 2fr 1fr;
+
+        .card-h-titulo {
+            font-size: 1.5em;
+        }
+    }
+
+    .block-interes {
+        grid-template-columns: 1fr 1.4fr;
+    
+        .block-interes-info {
+            padding: 4em 2.5em;
+    
+            .block-interes-titulo {
+                font-size: 2.7em;
+            }
+    
+            .block-interes-parrafo {
+                font-size: 1.2em;
+                margin-bottom: 3em;
+            }
+        }
+    }
+
+    .post {
+        .post-info {
+    
+            .post-title {
+                font-size: 5em;
+            }
+        
+            .post-tag {
+                font-size: 1.5em;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+    }
+}

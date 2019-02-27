@@ -1,0 +1,236 @@
+.main-nav {
+  background-color: #5f2793;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2.5em; }
+  .main-nav .navbar-brand h1 {
+    color: #FFFFFF; }
+
+a {
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+body {
+  background-color: #F6F6F6;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh; }
+
+.boton {
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #007bff;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center; }
+  .boton:hover {
+    color: #e3e3e3; }
+  .boton.boton-blanco {
+    background-color: #FFFFFF;
+    color: #000000; }
+  .boton.boton-morado {
+    background-color: #5f2793; }
+  .boton.boton-dorado {
+    background-color: #F19706; }
+
+.botones-wrapper {
+  display: grid;
+  grid-gap: 2.5em;
+  margin-bottom: 2.5em; }
+  .botones-wrapper.grid-1 {
+    grid-template-columns: repeat(1, 1fr); }
+  .botones-wrapper.grid-2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .botones-wrapper.grid-3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .botones-wrapper.grid-4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .botones-wrapper.grid-5 {
+    grid-template-columns: repeat(5, 1fr); }
+  .botones-wrapper .boton:hover {
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); }
+
+.encuesta {
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: #FFFFFF;
+  color: #000000;
+  display: grid;
+  grid-gap: 2.5em;
+  grid-template-columns: 1fr;
+  padding: 1.5em 2em;
+  margin-bottom: 1em;
+  min-height: 60px; }
+  .encuesta .encuesta-info {
+    color: #000000;
+    text-align: left; }
+    .encuesta .encuesta-info h5,
+    .encuesta .encuesta-info p {
+      margin-bottom: 0; }
+    .encuesta .encuesta-info h5 {
+      font-weight: bold;
+      margin-bottom: 2px; }
+    .encuesta .encuesta-info .info-label {
+      background-color: #007bff;
+      border-radius: 1em;
+      color: #FFFFFF;
+      display: inline-block;
+      margin-top: 1em;
+      padding: 4px 10px; }
+    .encuesta .encuesta-info:hover {
+      color: #2ebd2e; }
+  .encuesta .encuesta-opciones {
+    -ms-flex-line-pack: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5em; }
+    .encuesta .encuesta-opciones .opciones-boton {
+      color: #000000;
+      text-align: center; }
+      .encuesta .encuesta-opciones .opciones-boton i {
+        font-size: 1.3em; }
+      .encuesta .encuesta-opciones .opciones-boton .opciones-boton-label {
+        display: block; }
+      .encuesta .encuesta-opciones .opciones-boton:hover {
+        color: #2ebd2e; }
+      .encuesta .encuesta-opciones .opciones-boton:last-child:hover {
+        color: #dc3545; }
+  .encuesta.borrador .encuesta-info .info-label {
+    background-color: #dc3545; }
+  .encuesta.borrador .encuesta-info:hover {
+    color: #dc3545; }
+  .encuesta:hover {
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); }
+  .encuesta:last-child {
+    margin-bottom: 3em; }
+
+@media (min-width: 768px) {
+  .boton {
+    font-size: 1.2rem; }
+  .botones-wrapper.grid-md-1 {
+    grid-template-columns: repeat(1, 1fr); }
+  .botones-wrapper.grid-md-2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .botones-wrapper.grid-md-3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .botones-wrapper.grid-md-4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .botones-wrapper.grid-md-5 {
+    grid-template-columns: repeat(5, 1fr); }
+  .encuesta {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 992px) {
+  .botones-wrapper.grid-lg-1 {
+    grid-template-columns: repeat(1, 1fr); }
+  .botones-wrapper.grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .botones-wrapper.grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .botones-wrapper.grid-lg-4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .botones-wrapper.grid-lg-5 {
+    grid-template-columns: repeat(5, 1fr); } }
+
+.categoria-block {
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: #FFFFFF;
+  color: #000000;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  padding: 2em; }
+  .categoria-block span {
+    font-size: 1.2em; }
+  .categoria-block:hover {
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); }
+  .categoria-block.categoria-seleccionado {
+    background-color: #F19706;
+    color: #FFFFFF; }
+
+.encuesta-edicion-wrapper {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
+  .encuesta-edicion-wrapper .encuesta-edicion-seccion {
+    padding: 2em; }
+    .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea {
+      -o-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border: 0;
+      border-bottom: 2px solid #e3e3e3;
+      resize: none; }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.4); }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea:-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.4); }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea::-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.4); }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea::placeholder {
+        color: rgba(0, 0, 0, 0.4); }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion textarea:focus {
+        border-bottom-color: #F19706;
+        outline: 0; }
+    .encuesta-edicion-wrapper .encuesta-edicion-seccion .encuesta-edicion-titulo {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      width: 100%; }
+    .encuesta-edicion-wrapper .encuesta-edicion-seccion .encuesta-edicion-instrucciones {
+      font-size: 1.5em;
+      width: 100%; }
+    .encuesta-edicion-wrapper .encuesta-edicion-seccion .edicion-pregunta-wrapper {
+      display: grid;
+      grid-template-columns: 60% 1fr;
+      margin-bottom: 2em; }
+      .encuesta-edicion-wrapper .encuesta-edicion-seccion .edicion-pregunta-wrapper .encuesta-edicion-pregunta {
+        font-size: 1.3em;
+        width: 100%; }
+
+.agregar-pregunta {
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .agregar-pregunta .agregar-pregunta-boton {
+    -ms-flex-line-pack: center;
+    align-content: center;
+    border-radius: 6rem;
+    background-color: #007bff;
+    display: grid;
+    font-size: 2em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0;
+    width: 60px; }
